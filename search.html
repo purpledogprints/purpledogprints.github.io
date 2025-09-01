@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Search</title>
+    <meta name="theme-color" content="#f9c74f" />
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Purple Dog Models" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@vectopus/atlas-icons/style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="left-side" onclick="location.href='/'">
+            <img src="/logos/logo.svg">
+            <h2>Purple Dog Models</h2>
+        </div>
+        <div class="right-side">
+            <div class="link-bar">
+                <a href="/shop"><i data-lucide="store" class="icon"></i>Shop</a>
+                <a href="/pricing"><i data-lucide="landmark" class="icon"></i>Pricing</a>
+                <a href="/login"><i data-lucide="log-in" class="icon"></i>Login</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="big-search-hero-content">
+            <!-- Place search bar here, directly under nav bar -->
+            <div class="search-page-bar">
+                <form class="search-bar" action="/search.html" method="GET">
+                    <input type="text" id="searchInput" name="q" placeholder="Search" />
+                    <button type="submit" aria-label="Search">
+                        <i data-lucide="search" class="icon"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Results Section -->
+            <main id="search-results">
+                <ul id="results"></ul>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/search.js"></script>
+    <script>
+        document.querySelector('.search-bar').addEventListener('submit', function (e) {
+            e.preventDefault(); // Stop normal form submission
+            const value = document.getElementById('searchInput').value.toLowerCase();
+
+            if (value === "upupdowndownleftrightleftrightba") {
+                window.location.href = "/mario.html";
+            } else {
+                // fallback: actually submit the form to show results
+                this.submit();
+            }
+        });
+    </script>
+</body>
+
+</html>

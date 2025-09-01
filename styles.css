@@ -1,0 +1,165 @@
+  * {
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Satoshi", "Manrope", sans-serif;
+  }
+
+  /* Example usage */
+  body {
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    color: #FFFAfa;
+  }
+  
+  a {
+    color: #707070;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  a:hover {
+    color: #f2f3f4;
+  }
+  
+  /*FONTS*/
+  
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi/Satoshi-Black.woff2") format("woff2");
+    src: url("/fonts/Satoshi/Satoshi-Black.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Manrope";
+    src: url("/fonts/Manrope/Manrope-Regular.woff2") format("woff2");
+    src: url("/fonts/Manrope/Manrope-Regular.ttf") format("truetype");
+  }
+  
+  /**/
+  
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin: 14px;
+    padding: 20px;
+    background: rgba(136, 136, 136, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    max-width: 100%;
+  }
+  
+  .nav-sections {
+    display: flex;
+    /* enables flexbox */
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    font-family: "Satoshi", sans-serif;
+  }
+  
+  .nav-sections svg {
+    width: 40px;
+  }
+  
+  .nav-bar>*:first-child {
+    justify-self: start;
+    cursor: pointer;
+  }
+  
+  /* search bar */
+  .nav-bar>*:last-child {
+    justify-self: end;
+    gap: 56px;
+  }
+  
+  .search-bar {
+    background: rgba(136, 136, 136, 0.2);
+    border-radius: 99px;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    height: 34px;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 10px;
+    justify-content: space-between;
+    font-family: "Manrope", sans-serif;
+  }
+  
+  .search-bar button {
+    border: none;
+    background: none;
+    padding: 0;
+    color: #f2f3f4;
+    height: 20px;
+  }
+  
+  .search-bar button svg {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .search-bar input {
+    background-color: transparent;
+    border: none;
+    color: #f2f3f4;
+    flex: 1;
+    height: 100%;
+    font-size: 15px;
+    font-family: "Manrope", sans-serif;
+  }
+  
+  .search-bar input::placeholder {
+    color: #707070;
+    /* light grey, adjust as needed */
+    opacity: 1;
+    /* ensure the color shows as intended */
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .link-button {
+    background-color: #ad02de;
+    color: #f2f3f4;
+    height: 44px;
+    width: 44px;
+    font-size: 15px;
+    gap: 5px;
+    border-radius: 999px;
+    display: flex;
+    /* ensure flexbox */
+    align-items: center;
+    /* vertically center content */
+    justify-content: center;
+  }
+  
+  .link-button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+@media (max-width: 600px) {
+  .search-bar {
+    width: 100%;
+    padding: 5px 10px;
+    display: none;
+  }
+
+  .nav-sections {
+    gap: 8px;
+  }
+}

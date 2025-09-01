@@ -1,0 +1,27 @@
+[
+  { 
+    "title": "3D Printer", 
+    "url": "/products/hardware/3d-printer",
+    "tags": ["printer", "hardware"]
+  },
+  { 
+    "title": "Mario Figurine", 
+    "url": "/products/mario/mario",
+    "tags": ["mario", "figure", "collectible"]
+  },
+  { 
+    "title": "Mario Star", 
+    "url": "/products/mario/mario-star",
+    "tags": ["mario", "figure", "collectible", "star"]
+  },
+  { 
+    "title": "Mario Pipe", 
+    "url": "/products/mario/mario-pipe",
+    "tags": ["mario", "figure", "collectible", "pipe"]
+  },
+  { 
+    "title": "Lego Speed Champions SKÅDIS Holder", 
+    "url": "/products/lego/speedchamp-skadis",
+    "tags": ["skadis", "car", "utility", "lego", "ikea"]
+  }
+]
